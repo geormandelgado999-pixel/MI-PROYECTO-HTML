@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoCell | Tecnología y Servicio Premium</title>
+    <style>
+        /* Paleta de colores High-Tech y Minimalista */
+        :root {
+            --bg-color: #0d0d0d;
+            --surface-color: #1a1a1a;
+            --text-main: #f2f2f2;
+            --text-muted: #888888;
+            --accent-blue: #00e5ff;
+            --chrome-border: linear-gradient(145deg, #444, #111);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        header {
+            background-color: rgba(13, 13, 13, 0.9);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #1a1a2e 0%, var(--bg-color) 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero h1 strong {
+            font-weight: 700;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: transparent;
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-blue);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--accent-blue);
+        }
+
+        /* Servicios */
+        .services {
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 229, 255, 0.1);
+            border-color: var(--accent-blue);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--surface-color);
+            color: var(--text-muted);
+            border-top: 1px solid #333;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Geo<span>Cell</span></div>
+        <nav>
+            <ul>
+                <li><a href="#showroom">Showroom</a></li>
+                <li><a href="#reparaciones">Servicio Técnico</a></li>
+                <li><a href="#accesorios">Accesorios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>El futuro de tu equipo, <strong>hoy.</strong></h1>
+        <p>Venta de dispositivos premium, accesorios de alta gama y servicio técnico especializado con precisión milimétrica.</p>
+        <a href="#cotizador" class="btn" onclick="alert('Iniciando Cotizador...')">Cotizar Reparación</a>
+    </section>
+
+    <section class="services" id="servicios">
+        <div class="card">
+            <h3>Showroom de Equipos</h3>
+            <p>Explora nuestro catálogo de smartphones de última generación. Modelos nuevos y semi-nuevos garantizados.</p>
+            <button class="btn" style="font-size: 0.8rem; padding: 8px 15px;" onclick="alert('Navegando al catálogo de ventas...')">Ver Catálogo</button>
+        </div>
+        <div class="card">
+            <h3>Laboratorio Técnico</h3>
+            <p>Diagnóstico avanzado, cambio de pantallas, baterías y reparación de placas con seguimiento en tiempo real.</p>
+            <button class="btn" style="font-size: 0.8rem; padding: 8px 15px;" onclick="alert('Abriendo estado de reparación...')">Consultar Estado</button>
+        </div>
+        <div class="card">
+            <h3>Accesorios Premium</h3>
+            <p>Protección y estilo. Fundas resistentes, cristales templados y periféricos de las mejores marcas.</p>
+            <button class="btn" style="font-size: 0.8rem; padding: 8px 15px;" onclick="alert('Navegando a la tienda de accesorios...')">Ver Tienda</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 GeoCell. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
